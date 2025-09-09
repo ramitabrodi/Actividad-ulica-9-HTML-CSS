@@ -1,0 +1,295 @@
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  padding: 6px 12px;
+  display: block;
+}
+
+nav a.active, nav a:hover {
+  background: #b6d024;
+  border-radius: 4px;
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  background: #444;
+  color: #fff;
+  padding: 40px 50px;
+  align-items: center;
+}
+
+.hero-image {
+  flex: 1;
+  border: 10px solid #222;
+  border-bottom: 25px solid #222;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+}
+
+.hero-text {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.hero-text h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #b6d024;
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background: #b6d024;
+  color: #000;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px;
+}
+
+.welcome {
+  width: 68%;
+}
+
+.welcome h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #b6d024;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.welcome p {
+  margin-bottom: 15px;
+}
+
+.welcome ul {
+  margin: 15px 0 20px 20px;
+}
+
+.welcome li {
+  margin-bottom: 8px;
+}
+
+/* News Section */
+.news {
+  width: 28%;
+  background-color: #f2f2f2;
+  padding: 0;
+}
+
+.news h3 {
+  margin: 0;
+  padding: 15px;
+  background: #444;
+  color: #fff;
+  border-bottom: none;
+}
+
+.news article {
+  display: flex;
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilos de la imagen y el texto dentro de cada artículo */
+.news-content {
+  display: flex;
+  gap: 15px;
+}
+
+.news-content img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.news-content div {
+  /* No necesitamos estilos aquí, el gap del contenedor padre ya los separa */
+}
+
+.news .date {
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+/* Ajuste para el último artículo, para que no tenga borde inferior */
+.news article:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 30px 50px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-col:last-child {
+  margin-right: 0;
+}
+
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b6d024;
+  padding-bottom: 5px;
+}/* News Section */
+.news {
+  width: 28%; /* Mantén el ancho que ya tenías */
+  background-color: #f2f2f2; /* Color de fondo claro para la caja de noticias */
+  padding: 0; /* Sin relleno inicial, los artículos tendrán su propio relleno */
+  border: 1px solid #ccc; /* Un borde sutil alrededor de toda la sección de noticias */
+}
+
+.news h3 {
+  margin: 0;
+  padding: 15px;
+  background: #444; /* Fondo oscuro para el título "Latest News" */
+  color: #fff; /* Texto blanco para el título */
+  border-bottom: none; /* Elimina cualquier borde inferior que pueda haber */
+  font-size: 1.2em; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+/* Estilos para cada artículo de noticia */
+.news article {
+  display: flex; /* Permite que la imagen y el contenido de texto estén en la misma fila */
+  align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+  gap: 15px; /* Espacio entre la imagen y el texto del artículo */
+  padding: 15px;
+  border-bottom: 1px solid #ccc; /* Separador entre artículos */
+  background-color: #fff; /* Fondo blanco para cada artículo de noticia */
+}
+
+/* Para el último artículo de noticia, no queremos el borde inferior */
+.news article:last-child {
+  border-bottom: none;
+}
+
+/* Estilos específicos para la imagen dentro de cada artículo */
+.news article img {
+  width: 100px; /* Ancho fijo para la imagen */
+  height: 100px; /* Alto fijo para la imagen */
+  object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+  border: 1px solid #ddd; /* Borde sutil alrededor de la imagen */
+  flex-shrink: 0; /* Evita que la imagen se encoja si no hay espacio */
+}
+
+/* Contenedor del texto de la noticia */
+.news-content {
+  display: flex; /* Para organizar la fecha, título y párrafo */
+  flex-direction: column; /* Apila la fecha, título y párrafo verticalmente */
+  flex-grow: 1; /* Permite que este div ocupe el espacio restante */
+}
+
+.news .date {
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 5px; /* Espacio debajo de la fecha */
+}
+
+.news h4 {
+  font-size: 1em; /* Ajusta el tamaño del título del artículo */
+  color: #333; /* Color oscuro para el título del artículo */
+  margin-bottom: 5px; /* Espacio debajo del título */
+  line-height: 1.2;
+}
+
+.news p {
+  font-size: 0.9em;
+  color: #666; /* Color más claro para el párrafo del artículo */
+  line-height: 1.4;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 0.9em;
+}
